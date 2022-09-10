@@ -1,9 +1,11 @@
 
 import modulo_usuario
+import modulo_clave
 
-print("INICIO DE SECCION")
+print("INICIO DE SESIÓN")
 
 usuario=input("Introduce usuario: ")
-contrasena=input("Introduce contraseña: ")
+clave=input("Introduce contraseña: ")
 
 print(modulo_usuario.validar_nombre_usuario(usuario))
+print(modulo_clave.validacion_clave(clave))
