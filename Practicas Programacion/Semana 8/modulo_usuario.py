@@ -10,7 +10,3 @@ def validar_nombre_usuario(nombre):
         return 'El nombre de usuario debe contener al menos 6 caracteres'
     else:
         return 'El nombre de usuario no puede contener mas de 12 caracteres'
-
-nombre = input("Ingrese el nombre de usuario: ")
-
-print(validar_nombre_usuario(nombre))
