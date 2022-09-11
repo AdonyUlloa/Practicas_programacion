@@ -1,11 +1,25 @@
-
 import modulo_usuario
 import modulo_clave
 
+print("=======================")
 print("INICIO DE SESIÓN")
+print("=======================")
 
-usuario=input("Introduce usuario: ")
-clave=input("Introduce contraseña: ")
+while True:
+    user = input("Introduce un nombre de usuario: ")
+    validacion = modulo_usuario.validacion_usuario(user)
+    print(validacion)
+    if validacion == "Usuario válido":
+        break
 
-print(modulo_usuario.validar_nombre_usuario(usuario))
-print(modulo_clave.validacion_clave(clave))
+while True:
+    clave=input("Introduce contraseña: ")
+    validacion2 = modulo_clave.validacion_clave(clave)
+    print(validacion2)
+    if validacion2 == "Contraseña valida":
+        break
+
+print("=======================")
+print("BIENVENIDO ", user)
+print("=======================")
+print("Inicio de sesión registrado")

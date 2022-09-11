@@ -11,5 +11,5 @@ def validacion_clave(clave):
 	if len(clave)>=8 and clave.isspace()==False:
 		return "Contraseña valida"
 	else:
-		return "La contraseña elegida no es segura"
+		return "La contraseña elegida no es segura, La contraseña debe contener un mínimo de 8 caracteres sin espacios en blanco"
 
