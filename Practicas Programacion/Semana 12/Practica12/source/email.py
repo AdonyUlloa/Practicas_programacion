@@ -1,13 +1,13 @@
-from email.mime.image import MIMEImage
 from os import getenv
 from smtplib import SMTP
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from typing import List,Optional
 
-
+#CLASE EMAIL
 class Email:
 
+    #Funciones que los serviran para enviar el mensaje
     def __init__(self):
         self.Server = SMTP(
             host=getenv("STMP_HOSTNAME"),
@@ -28,9 +28,6 @@ class Email:
             mime['From']=getenv("STMP_USER")
             mime['To']=destn
             mime['Subject']=contenido
-            variable=open(r"C:\Users\PC\Downloads\gmail.png", "rb").read()
-            variablemime=MIMEImage(variable, 'png',name="gmail")
-            mime.attach(variablemime)
             format = MIMEText(kwargs['message_format'], kwargs['format'])
             mime.attach(format)
             self.Server.sendmail(getenv("STMP_USER"),destn,mime.as_string())
